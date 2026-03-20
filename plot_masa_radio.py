@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('cat_limpio.csv', header=None,names=['name','discoveryMethod','orbita','radio','masa'])
+df = pd.read_csv('cat_limpio.csv', header=None,names=['name','discoveryMethod','periodo_orbital','radio','masa'])
 df['densidad'] = 5.51* df['masa']/(df['radio']**3)
 sc = plt.scatter(df['radio'], df['masa'], c=df['densidad'],cmap='viridis')
 plt.title('Masa vs. Radio')
